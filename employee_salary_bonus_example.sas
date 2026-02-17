@@ -1,0 +1,16 @@
+
+/* Create a sample dataset */
+data employees;
+    input Name $ Salary;
+    AnnualBonus = Salary * 0.10;     /* Calculate 10% bonus */
+    datalines;
+Alice 60000
+Bob 75000
+Carol 82000
+;
+run;
+
+/* Print the dataset */
+proc print data=employees;
+    title "Employee Salary and Bonus";
+run;
